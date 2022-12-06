@@ -57,9 +57,6 @@ error="${yellow}[${white}!${yellow}] ${red}"
 success="${cyan}[${white}√${cyan}] ${green}"
 
 
-
-version="1.5"
-
 # Logo
 logo="
 ${green}  ____                _   _            _
@@ -87,12 +84,6 @@ ${blue}[3]${yellow} Login to your account
 ${blue}[4]${yellow} Visit ${green}https://localxpose.io/dashboard/access${yellow} and copy your authtoken
 "
 
-# Check for sudo
-if command -v sudo > /dev/null 2>&1; then
-    sudo=true
-else
-    sudo=false
-fi
 
 # Check if mac or termux
 termux=false
