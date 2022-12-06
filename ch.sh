@@ -60,9 +60,6 @@ success="${cyan}[${white}√${cyan}] ${green}"
 
 version="1.5"
 
-cwd=`pwd`
-tunneler_dir="$HOME/.tunneler"
-
 # Logo
 logo="
 ${green}  ____                _   _            _
