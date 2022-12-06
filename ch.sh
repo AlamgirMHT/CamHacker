@@ -65,7 +65,7 @@ ${cyan}| |   / _' | '_ ' _ \| |_| |/ _' |/ __| |/ / _ \ '__|
 ${purple}| |__| (_| | | | | | |  _  | (_| | (__|   <  __/ |
 ${yellow} \____\__,_|_| |_| |_|_| |_|\__,_|\___|_|\_\___|_|
 ${red}                                            [v${version}]
-${black}                                    [By KasRoudra]
+${blue}                                    [By KasRoudra]
 "
 
 ngrok_help="
