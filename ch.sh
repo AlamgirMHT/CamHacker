@@ -716,7 +716,6 @@ while true; do
     sleep 0.5
     if [[ -e "log.txt" ]]; then
         echo -e "\007${success}Image downloaded! Check directory!\n"
-        file=`ls | grep png`
         mv -f $file $FOL
         rm -rf log.txt
     fi
