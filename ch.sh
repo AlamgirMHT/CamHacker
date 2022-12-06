@@ -391,8 +391,7 @@ if [[ -z $UPDATE ]]; then
     exit 1
 else
     if [[ $UPDATE == true ]]; then
-        git_ver=`curl -s -N https://raw.githubusercontent.com/MR-ZIHAD/CamHacker/main/files/version.txt`
-    else
+             else
         git_ver=$version
     fi
 fi
