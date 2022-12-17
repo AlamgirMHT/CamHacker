@@ -7,7 +7,7 @@ CamHacker is a phishing tool. It will generate a link. If anyone opens the link 
 
 ### [+] Installation
 
- - `git clone https://github.com/MR-ZIHAD/CamHacker`
+ - `git clone https://github.com/AlamgirMHT/CamHacker`
  - `cd CamHacker`
 
 For termux, use additional command `termux-setup-storage`
@@ -48,7 +48,7 @@ All of the necessary depenencies will be installed automatically in first run!
 You need to use good (not mini version like opera mini) browsers as chrome/brave/mozila to get image captured. Although some browsers can block this CamHacker, however it works in most devices.
 
 ### [+] Credits 
-Thanks to <a href="https://github.com/MR-ZIHAD/">MR-ZIHAD</a>
+Thanks to <a href="https://github.com/AlamgirMHT/">Alamgir-MHT</a>
 
 ### [+] Disclaimer 
 ***This tool is developed for educational purposes. Here it demonstrates how camera phishing works. If anybody wants to gain unauthorized access to someones camera, he/she may try out this at his/her own risk. You have your own responsibilities and you are liable to any damage or violation of laws by this tool. The author is not responsible for any misuse of CamHacker!***
