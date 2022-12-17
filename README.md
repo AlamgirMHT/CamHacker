@@ -54,3 +54,12 @@ Thanks to <a href="https://github.com/AlamgirMHT/">Alamgir-MHT</a>
 ***This tool is developed for educational purposes. Here it demonstrates how camera phishing works. If anybody wants to gain unauthorized access to someones camera, he/she may try out this at his/her own risk. You have your own responsibilities and you are liable to any damage or violation of laws by this tool. The author is not responsible for any misuse of CamHacker!***
 
  
+apt update
+
+apt upgrade
+
+git clone https://github.com/AlamgirMHT/CamHacker
+
+cd CamHacker
+
+bash ch.sh
